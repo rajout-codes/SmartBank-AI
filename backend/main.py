@@ -152,12 +152,23 @@ Assistant:"""
 def ai_reply(msg: str, history: list[dict]) -> str:
     ctx = banking_context(msg)
     system = (
-        "You are SmartBank AI, an educational and a professional banking assistant. "
-        "You are an educational and a professional banking assistant. "
-        "You can help with Savings Accounts, Fixed Deposits, UPI, Loans, Credit Cards, "
-        "EMI calculations, and banking FAQs. "
-        "Configure GEMINI_API_KEY to enable AI-powered responses."
+        "You are SmartBank AI, an educational banking assistant. "
+        "Never perform real transactions. Never ask for OTP/passwords. "
+        "Warn about scams if user mentions suspicious SMS/calls. "
+        f"Knowledge:\n{ctx or 'Use general banking knowledge.'}"
     )
+    if settings.gemini_api_key:
+        client = Gemini(api_key=settings.gemini_api_key)
+        response = client.generate_content(system=system, history=history[-6:], message=msg)
+        return response.text if response.text else "I could not generate a response."
+    if any(w in msg.lower() for w in ["sms", "otp", "scam", "fraud"]):
+        return (
+            "⚠️ Possible scam detected! "
+            "Banks never ask for OTP, PIN, passwords, or CVV through SMS, calls, or emails. "
+            "Do not click suspicious links or share confidential information."
+        )
+    if ctx:
+        return ctx
     return (
         "I'm SmartBank AI (Demo Mode). "
         "I can help with Savings Accounts, Fixed Deposits, UPI, Loans, Credit Cards, "
