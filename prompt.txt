@@ -1,0 +1,627 @@
+# Build a Modern Banking AI Agent (Full Stack)
+
+You are an expert AI Engineer, Senior Software Architect, and UI/UX Designer.
+
+Build a complete, production-quality Banking AI Agent using the latest technologies and best coding practices.
+
+---
+
+# Project Name
+
+SmartBank AI Agent
+
+---
+
+# Goal
+
+Create an AI-powered banking assistant that helps users understand banking products, answer questions, compare loans, calculate EMIs, summarize financial documents, and simulate banking services.
+
+This is an educational/demo project only.
+
+Never perform real banking transactions.
+
+---
+
+# Tech Stack
+
+## Frontend
+
+* Next.js 15
+* React 19
+* TypeScript
+* Tailwind CSS
+* shadcn/ui
+* Framer Motion
+* React Hook Form
+* Zod
+* TanStack Query
+* Lucide Icons
+
+---
+
+## Backend
+
+* FastAPI
+* Python 3.13
+* Pydantic v2
+* SQLAlchemy 2
+* Alembic
+* Uvicorn
+
+---
+
+## AI Stack
+
+* LangGraph
+* LangChain
+* OpenAI GPT-4.1 or GPT-5 compatible models
+* OpenAI Embeddings
+* ChromaDB
+* Tavily Search Tool (optional)
+* MCP (Model Context Protocol) ready architecture
+* Structured Tool Calling
+* Agent Memory
+
+---
+
+## Database
+
+SQLite (development)
+
+Easy configuration for PostgreSQL later.
+
+---
+
+## Authentication
+
+JWT Authentication
+
+Roles
+
+* Customer
+* Bank Employee
+* Admin
+
+---
+
+## Folder Structure
+
+```
+smartbank-ai/
+
+frontend/
+
+backend/
+
+agents/
+
+tools/
+
+rag/
+
+embeddings/
+
+vector_db/
+
+uploads/
+
+documents/
+
+api/
+
+models/
+
+services/
+
+database/
+
+config/
+
+prompts/
+
+memory/
+
+tests/
+
+docker/
+
+README.md
+```
+
+---
+
+# UI Theme
+
+Modern fintech dashboard
+
+Use
+
+* Glassmorphism
+* Soft shadows
+* Rounded corners
+* Responsive layout
+* Dark Mode
+* Light Mode
+
+Pages
+
+* Landing Page
+* Login
+* Dashboard
+* AI Chat
+* Loan Calculator
+* Credit Card Comparison
+* FAQ
+* Document Analyzer
+* Profile
+* Admin Dashboard
+
+---
+
+# AI Agent Features
+
+## Banking Chat Assistant
+
+Answer questions like
+
+"What is a savings account?"
+
+"How does FD work?"
+
+"Difference between NEFT and RTGS"
+
+"Explain UPI"
+
+"Credit score"
+
+"Interest rate"
+
+"Bank charges"
+
+Use Retrieval-Augmented Generation whenever possible.
+
+---
+
+## Loan Eligibility Checker
+
+Collect
+
+* Salary
+* Age
+* Employment
+* Existing EMI
+* Credit Score
+
+Estimate
+
+* Eligible loan amount
+* Monthly EMI
+* Suggestions
+
+---
+
+## EMI Calculator
+
+Input
+
+Loan Amount
+
+Interest Rate
+
+Tenure
+
+Output
+
+Monthly EMI
+
+Interest
+
+Total Amount
+
+Generate charts if possible.
+
+---
+
+## Credit Card Recommendation
+
+Compare
+
+Rewards
+
+Cashback
+
+Travel
+
+Fuel
+
+Shopping
+
+Recommend the best option based on user preferences.
+
+---
+
+## Banking Product Recommendation
+
+Recommend
+
+Savings Accounts
+
+Current Accounts
+
+FD
+
+RD
+
+Insurance
+
+Mutual Funds
+
+Loans
+
+Explain pros and cons.
+
+---
+
+## Document Analyzer
+
+Upload
+
+PDF
+
+DOCX
+
+TXT
+
+AI should
+
+Summarize
+
+Extract important information
+
+Answer questions
+
+Highlight interest rates
+
+Highlight fees
+
+Highlight eligibility
+
+---
+
+## Banking FAQ
+
+Create a searchable knowledge base.
+
+Use Vector Database.
+
+---
+
+## Fraud Detection Tips
+
+User asks
+
+"I received this SMS."
+
+Agent explains
+
+Possible scam
+
+Safe practices
+
+Never request OTP or passwords.
+
+---
+
+## Transaction Simulator
+
+Mock transactions only.
+
+Generate fake receipts.
+
+No real banking integration.
+
+---
+
+## Financial Literacy Module
+
+Teach
+
+Budgeting
+
+Saving
+
+Investment basics
+
+Credit score
+
+Tax basics
+
+Simple language.
+
+---
+
+# RAG System
+
+Store banking documents inside ChromaDB.
+
+Support
+
+PDF
+
+DOCX
+
+TXT
+
+Markdown
+
+CSV
+
+Implement
+
+Chunking
+
+Embeddings
+
+Retriever
+
+Context Injection
+
+Source Citation
+
+---
+
+# Agent Memory
+
+Conversation Memory
+
+Session Memory
+
+User Preferences
+
+Recent Chats
+
+---
+
+# Tools
+
+Implement these tools
+
+Loan Calculator Tool
+
+EMI Tool
+
+Interest Tool
+
+Document Search Tool
+
+Calculator Tool
+
+Search Tool
+
+Recommendation Tool
+
+Comparison Tool
+
+Document Summarizer
+
+PDF Loader
+
+CSV Loader
+
+Web Search
+
+---
+
+# API Endpoints
+
+/auth/login
+
+/auth/register
+
+/chat
+
+/chat/history
+
+/upload
+
+/rag/search
+
+/loan/calculate
+
+/emi
+
+/cards
+
+/products
+
+/profile
+
+/admin
+
+---
+
+# Database Models
+
+User
+
+Chat
+
+Conversation
+
+Document
+
+Loan
+
+CreditCard
+
+BankProduct
+
+UploadedFile
+
+AgentMemory
+
+---
+
+# Security
+
+JWT
+
+Password Hashing
+
+Input Validation
+
+Rate Limiting
+
+CORS
+
+Environment Variables
+
+Never expose API Keys.
+
+---
+
+# Logging
+
+Structured Logging
+
+Error Handling
+
+Audit Logs
+
+---
+
+# Testing
+
+Pytest
+
+Frontend Tests
+
+API Tests
+
+---
+
+# Docker
+
+Dockerfile
+
+docker-compose.yml
+
+One-command setup.
+
+---
+
+# README
+
+Include
+
+Installation
+
+Architecture
+
+Folder Structure
+
+Screenshots Placeholder
+
+API Documentation
+
+Environment Variables
+
+Running Locally
+
+Deployment
+
+Future Improvements
+
+---
+
+# Code Quality
+
+Use
+
+SOLID Principles
+
+Repository Pattern
+
+Dependency Injection
+
+Async APIs
+
+Type Safety
+
+Reusable Components
+
+Proper Comments
+
+Meaningful Folder Structure
+
+No duplicated code.
+
+---
+
+# Nice-to-Have Features
+
+Voice Input
+
+Speech Output
+
+Multi-language Support
+
+Theme Switch
+
+Chat Export
+
+Conversation Search
+
+Notifications
+
+Analytics Dashboard
+
+---
+
+# Deployment
+
+Frontend
+
+Vercel
+
+Backend
+
+Render
+
+Railway
+
+Docker
+
+---
+
+# Important Instructions
+
+Generate the project incrementally.
+
+Start by creating the folder structure and configuration files.
+
+Then implement the backend.
+
+Then AI agent architecture.
+
+Then RAG.
+
+Then authentication.
+
+Then frontend.
+
+Then dashboards.
+
+Then testing.
+
+Then Docker.
+
+Ensure every generated file is complete and runnable.
+
+Do not use deprecated libraries.
+
+Use the latest stable versions available.
+
+The application should run successfully after installing dependencies and configuring environment variables.
+
+Produce clean, modular, production-ready code with clear explanations for each major component.
